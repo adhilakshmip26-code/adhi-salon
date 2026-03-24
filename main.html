@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Makeup Artist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== BODY ===== */
+body{
+    margin:0;
+
+    background-image: url('bb.png');
+    font-family: 'Playfair Display', serif;
+    background:#2b2b2b;
+    color:#fff;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.front-container{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+}
+
+/* ===== CARD ===== */
+.poster{
+    max-width:1100px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+/* ===== LEFT CONTENT ===== */
+.content{
+    width:50%;
+}
+
+.content h1{
+    font-size:60px;
+    margin:10px 0;
+    letter-spacing:3px;
+}
+
+.content p{
+    color:#ddd;
+}
+
+.services{
+    margin-top:20px;
+}
+
+.services li{
+    margin:8px 0;
+}
+
+/* ===== RIGHT IMAGE SHAPE ===== */
+.image-box{
+    width:50%;
+    position:relative;
+}
+
+.image-box img{
+    width:100%;
+    border-radius:60px 20px 60px 20px;
+    object-fit:cover;
+}
+
+/* ===== CIRCLE IMAGES ===== */
+.circle-group{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.circle-group img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #fff;
+}
+
+/* ===== VISIT BUTTON ===== */
+.visit-btn{
+    margin-top:40px;
+}
+
+.visit-btn a{
+    text-decoration:none;
+    background:#f3c6c6;
+    color:#000;
+    padding:12px 28px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.visit-btn a:hover{
+    background:#fff;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+    .poster{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .content,.image-box{
+        width:100%;
+    }
+
+    .content h1{
+        font-size:42px;
+    }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="front-container">
+
+<div class="poster">
+
+    <!-- LEFT -->
+    <div class="content">
+
+        <!-- <h4>Laranaa, Inc.</h4> -->
+
+        <h1>BEAUTY<br>SALON</h1>
+
+        <p>Exalted Beauty: Your Canvas, My Art</p>
+
+        <ul class="services">
+            <li>Traditional Makeup</li>
+            <li>Party Makeup</li>
+            <li>Creative Makeup</li>
+            <li>Makeup Lessons</li>
+        </ul>
+
+        <!-- VISIT SITE BUTTON -->
+        <div class="visit-btn">
+            <a href="index.html">Visit Site</a>
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9" alt="Makeup">
+        
+        <div class="circle-group">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348">
+            <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da">
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

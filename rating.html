@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rate Us</title>
+<style>
+body{
+text-align:center;
+font-family:Segoe UI;
+/* background:#fdf1f5; */
+background-color: pink;
+padding-top:100px;
+}
+span{
+font-size:40px;
+cursor:pointer;
+}
+
+
+
+.rating-box{
+    text-align:center;
+    padding:40px;
+}
+
+.stars span{
+    font-size:35px;
+    cursor:pointer;
+}
+
+.wa-btn{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+    <h3>🎉 Booking Confirmed!</h3>
+
+<br>
+<div class="rating-box">
+
+    <h3>⭐ Rate Our Service</h3>
+
+    <div class="stars">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+    </div>
+
+    <br>
+
+    <!-- WhatsApp Button -->
+    <button onclick="sendWhatsApp()" class="wa-btn">
+        📲 Send in WhatsApp
+    </button>
+
+    <p id="result"></p>
+
+</div>
+
+
+
+
+
+
+<!-- Go to Cart -->
+<button onclick="goCart()">Go to Cart 🛒</button>
+
+<!-- Back to Website -->
+<button onclick="goHome()">Search Again 🔍</button>
+
+
+<p id="msg"></p>
+
+<script>
+
+
+
+
+let selectedRating = 0;
+
+function rate(value){
+    selectedRating = value;
+    document.getElementById("result").innerText =
+        "Thanks for rating " + value + " ⭐";
+}
+
+function sendWhatsApp(){
+
+    if(selectedRating === 0){
+        alert("Please select rating first!");
+        return;
+    }
+
+    // Your WhatsApp number (country code compulsory)
+    let phone = "919003302193"; // change your number
+
+    let message =
+        "Hello! I rated your service ⭐ " +
+        selectedRating + "/5.";
+
+    let url =
+        "https://wa.me/" + phone +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+
+function goHome(){
+    window.location.href = "main.html";
+}
+
+// function rate(stars){
+// document.getElementById("msg").innerText =
+// "Thanks for rating " + stars + " ⭐😍";
+// }
+
+
+
+// function goCart(){
+//     window.location.href = "cart.html";
+
+// // window.location.href = "index.html"; // unga main page name
+
+// }
+
+let cart = JSON.parse(localStorage.getItem("bookingCart")) || [];
+
+function sendWhatsApp(){
+
+if(cart.length === 0){
+alert("No booking data found!");
+return;
+}
+
+let total=0;
+let productList="";
+
+cart.forEach(item=>{
+productList += "- "+item.name+" (₹"+item.price+")\n";
+total += item.price;
+});
+
+let message =
+"🌸 Nature Glow Beauty Parlour Booking 🌸\n\n"+
+"Services Selected:\n"+
+productList+
+"\nTotal Amount: ₹"+total+
+"\n\nPlease confirm my appointment 💖";
+
+let url="https://wa.me/919003302193?text="+encodeURIComponent(message);
+
+// 👉 open WhatsApp
+window.open(url,"_blank");
+}
+
+</script>
+
+</body>
+</html>

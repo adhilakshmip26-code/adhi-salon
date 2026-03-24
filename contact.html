@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<title>Apply Job</title>
+</head>
+
+<style>
+
+      /* ===== WHATSAPP FLOAT BUTTON ===== */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:lightgreen;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+background:#1ebe5d;
+}
+.circle{
+width:350px;
+height:350px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#1e1e2f;
+}
+
+/* HEADER */
+
+
+header{
+padding:30px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+
+/* background: linear-gradient(270deg,#ff1493,#ff69b4,#ff7f50,#ff1493);
+ */
+ background-color: #5a4a4a;
+
+box-shadow:0 4px 15px rgba(255,77,136);
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+
+
+
+/* HERO */
+
+.hero{
+height:90vh;
+background-color:#555;
+background:url('f1.png') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-shadow:2px 2px 5px black;
+}
+
+.hero h2{
+font-size:40px;
+}
+
+.hero button{
+padding:12px 30px;
+margin-top:20px;
+border:none;
+border-radius:30px;
+background:gray;
+color:white;
+cursor:pointer;
+}
+
+logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+/* NAVBAR */
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:yellow;
+transform:scale(1.1);
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 20px;
+text-align:center;
+}
+
+
+
+
+
+/* BRIDAL */
+
+#bridal{
+    
+    background-color:#fdf1f5;
+}
+
+.bridal{
+display:inline-block;
+width:250px;
+margin:20px;
+padding:20px;
+border-radius:15px;
+
+background: white;
+color:black;
+}
+
+.bridal img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#e75480;
+color:white;
+border:#f8c8dc;
+border-radius:5px;
+cursor:pointer;
+}
+/* SERVICES */
+
+#services{
+
+    background-color:#fdf1f5;
+}
+
+.card{
+display:inline-block;
+background:linear-gradient(45deg,#ff1493,#ff69b4);
+width:250px;
+margin:15px;
+padding:20px;
+border-radius:15px;
+background:#ffffff;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#ff1493;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* CART */
+
+#cart{
+    background-color:#fdf1f5;
+    color:black;
+}
+
+#cart ul{
+list-style:none;
+margin-top:20px;
+}
+
+#cart li{
+margin:5px 0;
+}
+
+input,select{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+/* FOOTER */
+.footer {
+    position: relative;
+    background: url('your-image.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    color: white;
+    z-index: 1;
+}
+
+/* 🔥 Overlay (main fix) */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: rgba(0, 0, 0, 0.6); /* 👈 dark overlay */
+    
+    z-index: -1;
+}
+
+/* Content styling */
+.footer h2 {
+    color: #ff4d88;
+}
+
+.footer p, 
+.footer li {
+    color: #f1f1f1;
+}
+
+
+.footer{
+width:100%;
+padding:40px 20px;
+color:#ff4d88;
+background:url('b12.jpg') no-repeat center/cover;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.footer-box{
+flex:1;
+padding:20px;
+min-width:250px;
+}
+
+.footer-box h3{
+margin-bottom:15px;
+}
+
+.footer-box ul{
+list-style:none;
+padding:0;
+}
+
+.footer-box ul li{
+margin:8px 0;
+}
+
+.center-img{
+text-align:center;
+}
+
+.center-img img{
+width:150px;
+border-radius:10px;
+}
+
+.social i{
+margin:10px;
+font-size:20px;
+background:pink;
+color:white;
+padding:10px;
+border-radius:5px;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+}
+
+
+/* Founder Section */
+
+.founder-section{
+background:#fdf1f5; /* pink background */
+padding:80px 20px;
+}
+
+.founder-container{
+display:flex;
+align-items:center;     /* vertical center */
+justify-content:center; /* center full content */
+gap:60px;
+max-width:1000px;
+margin:auto;
+flex-wrap:wrap;
+}
+
+.founder-img img{
+width:300px;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.founder-text{
+max-width:500px;
+}
+
+.founder-text h2{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.founder-text h4{
+color:#e75480;
+margin-bottom:15px;
+
+}
+
+ 
+
+/* loc */
+.location-section{
+text-align:center;
+padding:60px 20px;
+background:#fdf1f5;
+}
+
+.location-section h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.map-container{
+width:100%;
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+} 
+
+
+.form-box{
+    background-color: #fdf1f5;
+    text-align: center;
+}
+
+</style>
+
+
+<body>
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/9003302193" 
+class="whatsapp-float" 
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+    <header>
+    <div>
+        <h1>Customer Personal Details 🌸</h1>
+        <!-- <p>Your Beauty, Our Passion</p> -->
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="bridal.html">Bridal</a>
+        <a href="services.html">Services</a>
+        
+        <!-- <a href="cart.html">Cart</a> -->
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+
+<div class="form-box">
+
+    
+<h1>Apply for  booking </h1>
+
+<input type="text" placeholder="Enter Name" required><br>
+
+<input type="email" placeholder="Enter Email" required><br>
+
+<input type="tel" placeholder="Enter Phone Number" required><br>
+
+
+
+
+<button onclick="apply()">Submit Application</button>
+
+</div>
+
+
+
+
+
+<footer class="footer">
+
+
+            
+            
+<div class="footer-container">
+
+    <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p>Home</p>
+        <p>Bridal</p>
+        <p>Services</p>
+        <p>PriceList</p>
+        <p>Contact</p>
+        <p>Career</p>
+    </div>
+
+    <div class="footer-col">
+        <h3>Our Services</h3>
+        <p>Hair Care</p>
+        <p>Skin Care</p>
+        <p>Body Care</p>
+        <p>Locate Us</p>
+    </div>
+
+    <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>Natural Salon Pvt Ltd</p>
+        <p>Nungambakkam, Chennai</p>
+        <p>+91 9003302193</p>
+        <p>contact@natural.com</p>
+    </div>
+
+</div>
+<div >
+    <h3>Our Social</h3>
+ <div class="social-icons">
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+    
+</div>
+
+   
+<p class="copyright">
+© 2026 Natural Beauty Parlour
+</p>
+
+</footer>
+
+
+
+<script>
+function apply(){
+   
+
+    alert("Applied Successfully ✅");
+
+
+    // Go to cart page
+    window.location.href = "cart.html";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bridal Packages</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<style>
+ body{
+    margin:0;
+    padding:0;
+    background:#1e1e2f;
+}
+ 
+    /* ===== WHATSAPP FLOAT BUTTON ===== */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:lightgreen;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+background:#1ebe5d;
+}
+.circle{
+width:350px;
+height:350px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#1e1e2f;
+}
+
+/* HEADER */
+
+
+header{
+padding:30px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+
+/* background: linear-gradient(270deg,#ff1493,#ff69b4,#ff7f50,#ff1493);
+ */
+ background-color: #5a4a4a;
+
+box-shadow:0 4px 15px rgba(255,77,136);
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+
+
+
+/* HERO */
+
+.hero{
+height:90vh;
+background-color:#555;
+background:url('f1.png') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-shadow:2px 2px 5px black;
+}
+
+.hero h2{
+font-size:40px;
+}
+
+.hero button{
+padding:12px 30px;
+margin-top:20px;
+border:none;
+border-radius:30px;
+background:gray;
+color:white;
+cursor:pointer;
+}
+
+logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+/* NAVBAR */
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:yellow;
+transform:scale(1.1);
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 20px;
+text-align:center;
+}
+
+
+
+
+
+/* BRIDAL */
+
+#bridal{
+    
+    background-color:#fdf1f5;
+}
+
+.bridal{
+display:inline-block;
+width:250px;
+margin:20px;
+padding:20px;
+border-radius:15px;
+
+background: white;
+color:black;
+}
+
+.bridal img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#e75480;
+color:white;
+border:#f8c8dc;
+border-radius:5px;
+cursor:pointer;
+}
+/* SERVICES */
+
+#services{
+
+    background-color:#fdf1f5;
+}
+
+.card{
+display:inline-block;
+background:linear-gradient(45deg,#ff1493,#ff69b4);
+width:250px;
+margin:15px;
+padding:20px;
+border-radius:15px;
+background:#ffffff;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#ff1493;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* CART */
+
+#cart{
+    background-color:#fdf1f5;
+    color:black;
+}
+
+#cart ul{
+list-style:none;
+margin-top:20px;
+}
+
+#cart li{
+margin:5px 0;
+}
+
+input,select{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+/* FOOTER */
+.footer {
+    position: relative;
+    background: url('your-image.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    color: white;
+    z-index: 1;
+}
+
+/* 🔥 Overlay (main fix) */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: rgba(0, 0, 0, 0.6); /* 👈 dark overlay */
+    
+    z-index: -1;
+}
+
+/* Content styling */
+.footer h2 {
+    color: #ff4d88;
+}
+
+.footer p, 
+.footer li {
+    color: #f1f1f1;
+}
+
+
+.footer{
+width:100%;
+padding:40px 20px;
+color:#ff4d88;
+background:url('b12.jpg') no-repeat center/cover;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.footer-box{
+flex:1;
+padding:20px;
+min-width:250px;
+}
+
+.footer-box h3{
+margin-bottom:15px;
+}
+
+.footer-box ul{
+list-style:none;
+padding:0;
+}
+
+.footer-box ul li{
+margin:8px 0;
+}
+
+.center-img{
+text-align:center;
+}
+
+.center-img img{
+width:150px;
+border-radius:10px;
+}
+
+.social i{
+margin:10px;
+font-size:20px;
+background:pink;
+color:white;
+padding:10px;
+border-radius:5px;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+}
+
+
+/* Founder Section */
+
+.founder-section{
+background:#fdf1f5; /* pink background */
+padding:80px 20px;
+}
+
+.founder-container{
+display:flex;
+align-items:center;     /* vertical center */
+justify-content:center; /* center full content */
+gap:60px;
+max-width:1000px;
+margin:auto;
+flex-wrap:wrap;
+}
+
+.founder-img img{
+width:300px;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.founder-text{
+max-width:500px;
+}
+
+.founder-text h2{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.founder-text h4{
+color:#e75480;
+margin-bottom:15px;
+
+}
+
+ 
+
+/* loc */
+.location-section{
+text-align:center;
+padding:60px 20px;
+background:#fdf1f5;
+}
+
+.location-section h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.map-container{
+width:100%;
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+} 
+
+
+/* brfore&aftetr */
+
+ .founder-section {
+    padding: 80px 0;
+    background: #fdf1f5;
+}
+
+.founder-box {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* IMAGE BOX */
+.founder-img {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* IMAGE FULL COVER */
+.founder-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* BEFORE AFTER TEXT */
+.img-content {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.before {
+    background: rgba(0,0,0,0.6);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.after {
+    background: #ff4d88;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* CONTENT */
+.founder-content h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.founder-content h5 {
+    color: #ff4d88;
+    margin: 10px 0;
+}
+
+.founder-content p {
+    color: #555;
+    max-width: 450px;
+}
+
+.transform-box {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+/* IMAGE RIGHT / CONTENT LEFT */
+.transform-box.reverse {
+    flex-direction: row-reverse;
+}
+
+/* loc */
+.location-section{
+text-align:center;
+padding:60px 20px;
+background:#fdf1f5;
+}
+
+.location-section h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.map-container{
+width:100%;
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+} 
+
+
+
+
+</style>
+
+<body>
+    <!--  WhatsApp Floating Button - -->
+<a href="https://wa.me/9003302193" 
+class="whatsapp-float" 
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+    <header>
+
+
+<div class="header-content">
+
+<h1>Bride & Groom Makeover</h1>
+
+<!-- <p>Welcome to Nature Glow Beauty Parlour</p> -->
+
+<!-- <p>We provide professional bridal makeup, skin care, hair styling and beauty treatments.</p> -->
+</div>
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="bridal.html">Bridal</a>
+
+<a href="services.html">Services</a>
+
+<!-- <a href="cart.html">Cart</a> -->
+
+
+<a href="confirm.html">Contact</a>
+
+<a href="cart.html">Cart</a>
+
+
+</nav>
+</header>
+
+
+ <section id="bridal">
+    
+<h1>💍 Bridal Packages</h1>
+    <div>
+
+    
+    
+<div class="card">
+<img src="party makup.jpg">
+
+<button onclick="addToCart('',499)">Add to Cart</button>
+</div> 
+
+
+
+
+
+<div class="card">
+<img src="women.jpg">
+<button onclick="addToCart('',499)">Add to Cart</button>
+
+
+</div>
+
+<div class="card">
+<img src="both.jpg">
+<button onclick="addToCart('',499)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+<img src="bridal.jpg">
+<button onclick="addToCart('',499)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="bride2.jpg">
+<button onclick="addToCart('',499)">Add to Cart</button>
+
+
+</div>
+
+<div class="card">
+<img src="bride dress (1).png">
+<button onclick="addToCart('',499)">Add to Cart</button>
+
+
+</div>
+<div class="card">
+<img src="bride dress (2).png">
+<button onclick="addToCart('',499)">Add to Cart</button>
+
+
+</div>
+
+
+</div>
+</section>
+
+
+<section class="founder-section">
+  <div class="container">
+
+    <div class="founder-box">
+
+      <!-- IMAGE SIDE -->
+      <div class="founder-img">
+        <img src="bh.png" alt="Bridal Transformation">
+
+        <!-- Before After Text -->
+        <div class="img-content">
+          <span class="before">Before</span>
+          <span class="after">After</span>
+        </div>
+      </div>
+
+      <!-- CONTENT SIDE -->
+      <div class="founder-content">
+        <h1>Bridal Transformation</h1><br>
+        <p>
+          Naturals Beauty Academy was founded with a vision to create
+          professional beauty artists through world-class training.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<section class="founder-section">
+  <div class="container">
+
+    <div class="founder-box">
+
+      <!-- IMAGE SIDE -->
+      <div class="founder-img">
+        <img src="gh.png" alt="Bridal Transformation">
+
+        <!-- Before After Text -->
+        <div class="img-content">
+          <span class="before">Before</span>
+          <span class="after">After</span>
+        </div>
+      </div>
+
+      <!-- CONTENT SIDE -->
+      <div class="founder-content">
+        <h1>Groom Transformation</h1><br>
+        <p>
+          Naturals Beauty Academy was founded with a vision to create
+          professional beauty artists through world-class training.
+        </p>
+      </div>
+
+    </div>
+
+
+
+
+</div>
+
+<a href="index.html"></a>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+<h3>Quick Links</h3>
+<p>Home</p>
+<p>Bridal</p>
+<p>Services</p>
+<p>PriceList</p>
+<p>Contact</p>
+<p>Career</p>
+</div>
+
+<div class="footer-col">
+<h3>Our Services</h3>
+<p>Hair Care</p>
+<p>Skin Care</p>
+<p>Body Care</p>
+<p>Locate Us</p>
+</div>
+
+<div class="footer-col">
+<h3>Contact Us</h3>
+<p>Nature Glow Beauty Parlour</p>
+<p>Chennai</p>
+<p>+91 9003302193</p>
+<p>contact@natural.com</p>
+</div>
+
+</div>
+
+<div style="text-align:center">
+
+<h3>Our Social</h3>
+
+
+
+<div class="social-icons">
+
+
+
+
+    <a href="https://instagram.com/naturalbeautyparlour" target="_blank">
+<i class="fab fa-instagram"></i></a>
+
+<a href="https://facebook.com/" target="_blank">
+<i class="fab fa-facebook-f"></i></a>
+
+<a href="https://twitter.com/" target="_blank">
+<i class="fab fa-twitter"></i></a>
+
+<a href="https://youtube.com/" target="_blank">
+<i class="fab fa-youtube"></i></a>
+
+
+</div>
+
+<p class="copyright">
+© 2026 Nature Glow Beauty Parlour
+</p>
+
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Services</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+  /* ===== WHATSAPP FLOAT BUTTON ===== */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:lightgreen;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+background:#1ebe5d;
+}
+.circle{
+width:350px;
+height:350px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#1e1e2f;
+}
+
+/* HEADER */
+
+
+header{
+padding:30px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+
+/* background: linear-gradient(270deg,#ff1493,#ff69b4,#ff7f50,#ff1493);
+ */
+ background-color: #5a4a4a;
+
+box-shadow:0 4px 15px rgba(255,77,136);
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+
+
+
+/* HERO */
+
+.hero{
+height:90vh;
+background-color:#555;
+background:url('f1.png') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-shadow:2px 2px 5px black;
+}
+
+.hero h2{
+font-size:40px;
+}
+
+.hero button{
+padding:12px 30px;
+margin-top:20px;
+border:none;
+border-radius:30px;
+background:gray;
+color:white;
+cursor:pointer;
+}
+
+logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+border-radius:50%;
+}
+
+/* NAVBAR */
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:yellow;
+transform:scale(1.1);
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 20px;
+text-align:center;
+}
+
+
+
+
+
+/* BRIDAL */
+
+#bridal{
+    
+    background-color:#fdf1f5;
+}
+
+.bridal{
+display:inline-block;
+width:250px;
+margin:20px;
+padding:20px;
+border-radius:15px;
+
+background: white;
+color:black;
+}
+
+.bridal img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#e75480;
+color:white;
+border:#f8c8dc;
+border-radius:5px;
+cursor:pointer;
+}
+/* SERVICES */
+
+#services{
+
+    background-color:#fdf1f5;
+}
+
+.card{
+display:inline-block;
+background:linear-gradient(45deg,#ff1493,#ff69b4);
+width:250px;
+margin:15px;
+padding:20px;
+border-radius:15px;
+background:#ffffff;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card button{
+margin-top:10px;
+padding:10px 20px;
+background:#ff1493;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* CART */
+
+#cart{
+    background-color:#fdf1f5;
+    color:black;
+}
+
+#cart ul{
+list-style:none;
+margin-top:20px;
+}
+
+#cart li{
+margin:5px 0;
+}
+
+input,select{
+padding:10px;
+margin:10px;
+width:250px;
+}
+
+/* FOOTER */
+.footer {
+    position: relative;
+    background: url('your-image.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    color: white;
+    z-index: 1;
+}
+
+/* 🔥 Overlay (main fix) */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: rgba(0, 0, 0, 0.6); /* 👈 dark overlay */
+    
+    z-index: -1;
+}
+
+/* Content styling */
+.footer h2 {
+    color: #ff4d88;
+}
+
+.footer p, 
+.footer li {
+    color: #f1f1f1;
+}
+
+
+.footer{
+width:100%;
+padding:40px 20px;
+color:#ff4d88;
+background:url('b12.jpg') no-repeat center/cover;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.footer-box{
+flex:1;
+padding:20px;
+min-width:250px;
+}
+
+.footer-box h3{
+margin-bottom:15px;
+}
+
+.footer-box ul{
+list-style:none;
+padding:0;
+}
+
+.footer-box ul li{
+margin:8px 0;
+}
+
+.center-img{
+text-align:center;
+}
+
+.center-img img{
+width:150px;
+border-radius:10px;
+}
+
+.social i{
+margin:10px;
+font-size:20px;
+background:pink;
+color:white;
+padding:10px;
+border-radius:5px;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+}
+
+
+/* Founder Section */
+
+.founder-section{
+background:#fdf1f5; /* pink background */
+padding:80px 20px;
+}
+
+.founder-container{
+display:flex;
+align-items:center;     /* vertical center */
+justify-content:center; /* center full content */
+gap:60px;
+max-width:1000px;
+margin:auto;
+flex-wrap:wrap;
+}
+
+.founder-img img{
+width:300px;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.founder-text{
+max-width:500px;
+}
+
+.founder-text h2{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.founder-text h4{
+color:#e75480;
+margin-bottom:15px;
+
+}
+
+ 
+
+/* loc */
+.location-section{
+text-align:center;
+padding:60px 20px;
+background:#fdf1f5;
+}
+
+.location-section h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.map-container{
+width:100%;
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+} 
+
+</style>
+<body>
+
+
+    <header>
+<div>
+<h2>Our Services ✨🌹</h2>
+<!-- <p>Your Beauty, Our Passion</p> -->
+</div>
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="bridal.html">Bridal</a>
+
+<a href="services.html">Services</a>
+
+<!-- <a href="cart.html">Cart</a> -->
+
+
+<a href="contact.html">Conatct</a>
+
+<a href="cart.html">Cart</a>
+
+
+</nav>
+</header>
+
+
+
+</div>
+
+
+<section id="services">
+    <h1 class="service-title">Pedicure💅& Madicure</h1>
+<div class="card">
+    <img src="pedi 1.jpg">
+    <h3>$300</h3>
+
+<button onclick="addToCart('Pedicure💅',499)">Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="pedi 2.jpg">
+    <h3>$200</h3>
+
+<button onclick="addToCart('Madicure',399)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="4.jpg">` <h3>$400</h3>
+
+<button onclick="addToCart('Pedicure💅',499)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+    <img src="pedi 3.jpg">
+<h3>$350</h3>
+<button onclick="addToCart('Madicure',999)">Add to Cart</button>
+
+</div>
+</section>
+
+
+
+
+
+<section id="services">
+    <h1 class="service-title">Bride & Groom</h1>
+<div class="card">
+    <img src="wedding shoot.jpg">
+    <h3>$10000</h3>
+
+<button onclick="addToCart('Bride & Groom',10000)">Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="party2.jpg">
+    <h3>$5000</h3>
+
+<button onclick="addToCart('Party',5000)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="groom4.jpg">`
+    <h3>$10000</h3> 
+
+<button onclick="addToCart('Both',9000)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+    <img src="weddingshoot.jpg">
+    <h3>$12k</h3>
+
+<button onclick="addToCart('wedding Makeover',12000)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="groom.jpg">
+    <h3>$500</h3>
+
+<button onclick="addToCart('Groom',500)">Add to Cart</button>
+
+</div>
+
+
+
+<div class="card">
+    <img src="both.jpg"><h3>$600</h3>
+
+<button onclick="addToCart('couple',600)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="groom3.jpg">
+<h3>$800</h3>
+<button onclick="addToCart('Groom',999)">Add to Cart</button>
+
+</div>
+</section>
+
+
+
+
+<section id="services">
+    <h1 class="service-title">Mehendi Design</h1>
+<div class="card">
+    <img src="medhandi.jpg">
+<h3>$5000</h3>
+<button onclick="addToCart('Mehendi',5000)">Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="eyebrow (4).png">
+    <h3>$6000</h3>
+
+<button onclick="addToCart('medhandi',6000)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="eyebrow (2).png">` 
+    <h3>$7000</h3>
+
+<button onclick="addToCart('medhandi',7000)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+    <img src="eyebrow (3).png">
+    <h3>$400</h3>
+
+<button onclick="addToCart('Mehendi',4000)">Add to Cart</button>
+
+</div>
+</section>
+
+
+
+
+
+
+<section id="services">
+    <h1 class="service-title">Bridal Special</h1>
+<div class="card">
+    <img src="bride dress (1).png">
+    <h3>$12k</h3>
+
+<button onclick="addToCart('makeup',120000)">Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="bride dress (2).png">
+    <h3>$4000</h3>
+
+<button onclick="addToCart('hairstyle',4000)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="eyebrow (1).png">` 
+<h3>$200</h3>
+<button onclick="addToCart('eyeshadow',200)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+    <img src="men special (2).jpg">
+    <h3>$400</h3>
+
+<button onclick="addToCart('haircute',400)">Add to Cart</button>
+
+</div>
+</section>
+
+
+
+
+<section id="services">
+    <h1 class="service-title">Groom Special</h1>
+<div class="card">
+    <img src="men special (1).jpg">
+    <h3>$200</h3>
+
+<button onclick="addToCart('haircute',200)">Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="men special (3).jpg">
+    <h3>$100</h3>
+
+<button onclick="addToCart('Shaving',100)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="men.jpg">` 
+<h3>$299</h3>
+<button onclick="addToCart('facial',299)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+    <img src="groooooo.png">
+<h3>$199</h3>
+<button onclick="addToCart('cutting',199)">Add to Cart</button>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+<section id="services">
+    <h1 class="service-title">Other Services!!</h1>
+<div class="card">
+    <img src="eyebrow (1).png">
+    <h3>$500</h3>
+
+<button onclick="addToCart('Facial',500)">Add to Cart</button>
+</div>
+
+<div class="card">
+    <img src="hair-spa.jpg">
+<h3>$399</h3>
+<button onclick="addToCart('hair-spa',399)">Add to Cart</button>
+
+</div>
+
+
+<div class="card">
+    <img src="eyebrow.jpg">` 
+    <h3>$300</h3>
+
+<button onclick="addToCart('eyebrow',399)">Add to Cart</button>
+</div>
+
+
+<div class="card">
+    <img src="thread.jpg">
+    <h3>$200</h3>
+
+<button onclick="addToCart('Threading',200)">Add to Cart</button>
+
+</div></section>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+            
+            
+<div class="footer-container">
+
+    <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p>Home</p>
+        <p>Bridal</p>
+        <p>Services</p>
+        <p>PriceList</p>
+        <p>Contact</p>
+        <p>Career</p>
+    </div>
+
+    <div class="footer-col">
+        <h3>Our Services</h3>
+        <p>Hair Care</p>
+        <p>Skin Care</p>
+        <p>Body Care</p>
+        <p>Locate Us</p>
+    </div>
+
+    <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>Natural Salon Pvt Ltd</p>
+        <p>Nungambakkam, Chennai</p>
+        <p>+91 9003302193</p>
+        <p>contact@natural.com</p>
+    </div>
+
+</div>
+<div >
+    <h3>Our Social</h3>
+ <div class="social-icons">
+        
+
+
+    
+    <a href="https://instagram.com/naturalbeautyparlour" target="_blank">
+<i class="fab fa-instagram"></i></a>
+
+<a href="https://facebook.com/" target="_blank">
+<i class="fab fa-facebook-f"></i></a>
+
+<a href="https://twitter.com/" target="_blank">
+<i class="fab fa-twitter"></i></a>
+
+<a href="https://youtube.com/" target="_blank">
+<i class="fab fa-youtube"></i></a>
+
+
+</div>
+
+   
+<p class="copyright">
+© 2026 Natural Beauty Parlour
+</p>
+
+</footer>
+
+
+</section>
+<script>
+
+
+
+
+function addToCart(name, price){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({name:name, price:price});
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart");
+}
+
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = 0;
+
+let list = document.getElementById("cartItems");
+
+cart.forEach((item, index) => {
+    let li = document.createElement("li");
+    li.innerHTML = item.name + " - ₹" + item.price +
+    " <button onclick='removeItem("+index+")'>❌</button>";
+    list.appendChild(li);
+    total += item.price;
+});
+
+document.getElementById("total").innerText = total;
+
+function removeItem(index){
+    cart.splice(index,1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+}
+
+function checkout(){
+    if(cart.length === 0){
+        alert("Cart is empty!");
+        return;
+    }
+
+    localStorage.removeItem("cart");
+    window.location.href = "confirm.html";
+}
+
+function addToCart(name,price){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({name:name,price:price});
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+    let goCart = confirm(name + " Added To Cart ✅\nGo to Cart Page?");
+
+    if(goCart){
+        window.location.href = "cart.html";
+    }
+}
+
+</script>
+</body>
+</html>
